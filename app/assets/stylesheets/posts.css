@@ -1,0 +1,25 @@
+.layout{
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	background-color: white;
+}
+
+.jumbotron{
+	background-color: #8989d4;
+}
+
+#new_form_page{
+	background-color: lightblue;
+}
+
+a:hover{
+	background-color: white;
+	color: black;
+	text-underline-position: null;
+}
+
+.post_description{
+   line-height: 30px;
+}

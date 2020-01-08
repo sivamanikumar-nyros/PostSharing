@@ -1,0 +1,28 @@
+<p id="notice" class="text-center"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="layout">
+    <div class="container">
+      <h3>
+        <%= link_to 'Create New Post', new_post_path %>
+      </h3>
+    </div>
+    <hr>
+    <% @posts.each do |post| %>
+      <h2><img src="/user.png" style="width: 5%;height: 5%"> <b><%= post.user.name  %></b> </h2>
+      <h5 class="global_icon">Sponsored.<img src="/global.png" style="width: 3%;height: 3%"></h5>
+      <p><b>Title:<%= post.name %></b></p>
+      <img src="/sample.png" style="width: 100%;height: 200px">
+      <p class="post_description"><%= post.description %></p>
+      <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="https://img.icons8.com/flat_round/64/000000/share--v1.png" style="width: 30px;height: 30px"> Share
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item social_share" href="#"><span class="social_share"><%= social_share_button_tag(post.name) %></span></a>
+        </div>
+      </div>
+      <hr>
+    <% end %>
+  </div>
+</div>
